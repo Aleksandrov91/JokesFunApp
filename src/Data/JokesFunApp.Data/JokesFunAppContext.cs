@@ -12,6 +12,10 @@
         {
         }
 
+        public DbSet<Category> Categories { get; set; }
+
+        public DbSet<Joke> Jokes { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

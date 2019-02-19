@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E57AC2E0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox", "Tests\Sandbox\Sandbox.csproj", "{3F1E35F2-B29A-415E-8513-5476BEB43C4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JokesFunApp.Data.Common", "Data\JokesFunApp.Data.Common\JokesFunApp.Data.Common.csproj", "{F9D8A010-C159-4934-8FFB-5925F4B31315}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{3F1E35F2-B29A-415E-8513-5476BEB43C4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F1E35F2-B29A-415E-8513-5476BEB43C4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F1E35F2-B29A-415E-8513-5476BEB43C4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9D8A010-C159-4934-8FFB-5925F4B31315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9D8A010-C159-4934-8FFB-5925F4B31315}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9D8A010-C159-4934-8FFB-5925F4B31315}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9D8A010-C159-4934-8FFB-5925F4B31315}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{323554E1-91A0-48C1-B159-B5EA9E217FD9} = {8DD3ABB1-AED7-4FE2-8CD8-BD80F4F480A3}
 		{61ED2840-5C86-4239-BDE3-CB7FC11E0435} = {8DD3ABB1-AED7-4FE2-8CD8-BD80F4F480A3}
 		{3F1E35F2-B29A-415E-8513-5476BEB43C4F} = {E57AC2E0-38C2-454B-A5C0-7D890B21DB49}
+		{F9D8A010-C159-4934-8FFB-5925F4B31315} = {8DD3ABB1-AED7-4FE2-8CD8-BD80F4F480A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {940D3508-649D-460E-B9AC-178474BBED14}

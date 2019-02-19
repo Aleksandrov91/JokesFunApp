@@ -8,7 +8,9 @@
     using System.IO;
     using System.Linq;
     using System.Text;
+    using AngleSharp;
     using JokesFunApp.Data;
+    using JokesFunApp.Data.Models;
 
     public class Program
     {
@@ -29,8 +31,45 @@
 
         private static void SandboxCode(IServiceProvider serviceProvider)
         {
-            var db = serviceProvider.GetService<JokesFunAppContext>();
-            Console.WriteLine(db.Users.Count());
+            var dbContext =  serviceProvider.GetService<JokesFunAppContext>();
+            var config = Configuration.Default.WithDefaultLoader();
+            var context = BrowsingContext.New(config);
+
+            for (var i = 3001; i <= 10000; i++)
+            {
+                var url = "http://fun.dir.bg/vic_open.php?id=" + i;
+                var document = context.OpenAsync(url).GetAwaiter().GetResult();
+                var jokeContent = document.QuerySelector("#newsbody")?.TextContent?.Trim();
+                var categoryName = document.QuerySelector(".tag-links-left a")?.TextContent?.Trim();
+
+                if (!string.IsNullOrWhiteSpace(jokeContent) || !string.IsNullOrWhiteSpace(categoryName))
+                {
+                    var category = dbContext.Categories.FirstOrDefault(x => x.Name == categoryName);
+
+                    if (category == null)
+                    {
+                        category = new Category
+                        {
+                            Name = categoryName
+                        };
+                    }
+
+                    var joke = new Joke
+                    {
+                        Category = category,
+                        Content = jokeContent
+                    };
+
+                    dbContext.Jokes.Add(joke);
+                }
+
+                if (i % 100 == 0)
+                {
+                    dbContext.SaveChanges();
+                }
+
+                Console.WriteLine($"{i} => {categoryName}");
+            }
         }
 
         private static void ConfigureServices(ServiceCollection services)
