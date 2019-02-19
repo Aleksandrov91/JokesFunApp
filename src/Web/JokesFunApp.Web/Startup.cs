@@ -36,9 +36,17 @@
                 options.UseSqlServer(
                     this.Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDefaultIdentity<JokesFunAppUser>()
-                .AddDefaultUI(UIFramework.Bootstrap4)
-                .AddEntityFrameworkStores<JokesFunAppContext>();
+            services.AddDefaultIdentity<JokesFunAppUser>(options =>
+                {
+                    options.Password.RequiredLength = 5;
+                    options.Password.RequireDigit = false;
+                    options.Password.RequireLowercase = false;
+                    options.Password.RequireNonAlphanumeric = false;
+                    options.Password.RequireUppercase = false;
+                }
+            )
+            .AddDefaultUI(UIFramework.Bootstrap4)
+            .AddEntityFrameworkStores<JokesFunAppContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
