@@ -42,7 +42,7 @@
                 var jokeContent = document.QuerySelector("#newsbody")?.TextContent?.Trim();
                 var categoryName = document.QuerySelector(".tag-links-left a")?.TextContent?.Trim();
 
-                if (!string.IsNullOrWhiteSpace(jokeContent) || !string.IsNullOrWhiteSpace(categoryName))
+                if (!string.IsNullOrWhiteSpace(jokeContent) && !string.IsNullOrWhiteSpace(categoryName))
                 {
                     var category = dbContext.Categories.FirstOrDefault(x => x.Name == categoryName);
 
@@ -63,7 +63,7 @@
                     dbContext.Jokes.Add(joke);
                 }
 
-                if (i % 100 == 0)
+                if (i % 10 == 0)
                 {
                     dbContext.SaveChanges();
                 }
