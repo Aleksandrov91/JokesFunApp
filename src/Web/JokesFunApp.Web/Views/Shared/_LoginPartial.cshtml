@@ -1,6 +1,8 @@
+@using JokesFunApp.Web.Areas.Identity.Data
 @using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+
+@inject SignInManager<JokesFunAppUser> SignInManager
+@inject UserManager<JokesFunAppUser> UserManager
 
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
