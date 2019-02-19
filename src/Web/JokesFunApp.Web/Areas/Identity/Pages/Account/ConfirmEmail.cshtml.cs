@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using JokesFunApp.Web.Areas.Identity.Data;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-
-namespace JokesFunApp.Web.Areas.Identity.Pages.Account
+﻿namespace JokesFunApp.Web.Areas.Identity.Pages.Account
 {
+    using Data.Models;
+
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.RazorPages;
+
+    using System;
+    using System.Threading.Tasks;
+
     [AllowAnonymous]
     public class ConfirmEmailModel : PageModel
     {

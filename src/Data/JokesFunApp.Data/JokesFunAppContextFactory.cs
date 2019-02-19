@@ -7,8 +7,6 @@
 
     using System.IO;
 
-    using Web.Models;
-
     public class JokesFunAppContextFactory : IDesignTimeDbContextFactory<JokesFunAppContext>
     {
         public JokesFunAppContext CreateDbContext(string[] args)

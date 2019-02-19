@@ -1,12 +1,14 @@
-﻿using System.Threading.Tasks;
-using JokesFunApp.Web.Areas.Identity.Data;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
-
-namespace JokesFunApp.Web.Areas.Identity.Pages.Account.Manage
+﻿namespace JokesFunApp.Web.Areas.Identity.Pages.Account.Manage
 {
+    using Data.Models;
+
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.RazorPages;
+    using Microsoft.Extensions.Logging;
+
+    using System.Threading.Tasks;
+
     public class PersonalDataModel : PageModel
     {
         private readonly UserManager<JokesFunAppUser> _userManager;

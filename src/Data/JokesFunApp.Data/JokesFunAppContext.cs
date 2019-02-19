@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using JokesFunApp.Web.Areas.Identity.Data;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-
-namespace JokesFunApp.Web.Models
+﻿namespace JokesFunApp.Data
 {
+    using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore;
+
+    using Models;
+
     public class JokesFunAppContext : IdentityDbContext<JokesFunAppUser>
     {
         public JokesFunAppContext(DbContextOptions<JokesFunAppContext> options)
