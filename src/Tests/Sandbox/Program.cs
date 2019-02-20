@@ -10,6 +10,7 @@
     using System.Text;
     using AngleSharp;
     using JokesFunApp.Data;
+    using JokesFunApp.Data.Common;
     using JokesFunApp.Data.Models;
 
     public class Program
@@ -82,6 +83,8 @@
             services.AddDbContext<JokesFunAppContext>(options =>
                 options.UseSqlServer(
                     configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
         }
     }
 }
