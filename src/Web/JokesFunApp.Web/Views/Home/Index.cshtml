@@ -1,8 +1,21 @@
-﻿@{
+﻿@model JokesFunApp.Web.Models.Home.IndexViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row">
+    @foreach (var joke in Model.Jokes)
+    {
+        <div class="col-md-3 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">@joke.Content</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">@joke.CategoryName</small>
+                </div>
+            </div>
+        </div>
+    }
 </div>
