@@ -13,7 +13,10 @@
                     <p class="card-text">@joke.Content</p>
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted">@joke.CategoryName</small>
+                    <small class="text-muted">
+                        @joke.CategoryName
+                        <a class="btn btn-primary btn-sm" asp-controller="Jokes" asp-action="Details" asp-route-id="@joke.Id">View</a>
+                    </small>
                 </div>
             </div>
         </div>

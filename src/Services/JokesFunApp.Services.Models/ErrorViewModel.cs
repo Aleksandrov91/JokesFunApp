@@ -1,6 +1,4 @@
-using System;
-
-namespace JokesFunApp.Web.Models
+namespace JokesFunApp.Services.Models
 {
     public class ErrorViewModel
     {

@@ -1,14 +1,14 @@
 ﻿namespace JokesFunApp.Web.Controllers
 {
     using JokesFunApp.Services.DataServices;
+    using JokesFunApp.Services.Models;
     using JokesFunApp.Services.Models.Home;
-    using JokesFunApp.Web.Models;
 
     using Microsoft.AspNetCore.Mvc;
 
     using System.Diagnostics;
 
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private readonly IJokesService jokesService;
 
@@ -37,7 +37,7 @@
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return this.View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return this.View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? this.HttpContext.TraceIdentifier });
         }
     }
 }
