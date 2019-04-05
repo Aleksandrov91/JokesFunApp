@@ -3,7 +3,7 @@
     using Data;
     using Data.Common;
     using Data.Models;
-
+    using JokesFunApp.Services.DataServices;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;
@@ -53,6 +53,7 @@
 
             // Application services.
             services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
+            services.AddScoped<IJokesService, JokesService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

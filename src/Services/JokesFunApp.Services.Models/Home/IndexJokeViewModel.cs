@@ -1,4 +1,4 @@
-﻿namespace JokesFunApp.Web.Models.Home
+﻿namespace JokesFunApp.Services.Models.Home
 {
     public class IndexJokeViewModel
     {

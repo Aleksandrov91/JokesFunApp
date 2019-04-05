@@ -17,6 +17,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Data\JokesFunApp.Data.Models\JokesFunApp.Data.Models.csproj" />
     <ProjectReference Include="..\..\Data\JokesFunApp.Data\JokesFunApp.Data.csproj" />
+    <ProjectReference Include="..\..\Services\JokesFunApp.Services.DataServices\JokesFunApp.Services.DataServices.csproj" />
+    <ProjectReference Include="..\..\Services\JokesFunApp.Services.Models\JokesFunApp.Services.Models.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,42 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using JokesFunApp.Web.Models;
-
-namespace JokesFunApp.Web.Controllers
+﻿namespace JokesFunApp.Web.Controllers
 {
-    using Data.Common;
-    using Data.Models;
-    using Models.Home;
+    using JokesFunApp.Services.DataServices;
+    using JokesFunApp.Services.Models.Home;
+    using JokesFunApp.Web.Models;
+
+    using Microsoft.AspNetCore.Mvc;
+
+    using System.Diagnostics;
 
     public class HomeController : Controller
     {
-        private readonly IRepository<Joke> jokesRepository;
+        private readonly IJokesService jokesService;
 
-        public HomeController(IRepository<Joke> jokesRepository)
+        public HomeController(IJokesService jokesService)
         {
-            this.jokesRepository = jokesRepository;
+            this.jokesService = jokesService;
         }
 
         public IActionResult Index()
         {
-            var jokes = this.jokesRepository.All()
-                .OrderBy(x => Guid.NewGuid())
-                .Select(x => new IndexJokeViewModel
-                {
-                    Content = x.Content,
-                    CategoryName = x.Category.Name
-                }).Take(20);
+            var jokes = this.jokesService.GetRandomJokes(20);
 
-            var viewmodel = new IndexViewModel
+            var viewModel = new IndexViewModel
             {
                 Jokes = jokes
             };
 
-            return this.View(viewmodel);
+            return this.View(viewModel);
         }
 
         public IActionResult Privacy()

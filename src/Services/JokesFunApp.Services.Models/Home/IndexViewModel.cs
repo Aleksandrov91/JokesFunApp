@@ -1,5 +1,6 @@
-﻿namespace JokesFunApp.Web.Models.Home
+﻿namespace JokesFunApp.Services.Models.Home
 {
+    using JokesFunApp.Services.Models.Home;
     using System.Collections.Generic;
 
     public class IndexViewModel

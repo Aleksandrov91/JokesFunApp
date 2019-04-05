@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.329
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{8DD3ABB1-AED7-4FE2-8CD8-BD80F4F480A3}"
 EndProject
@@ -9,15 +9,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{5015C2EF-C60
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JokesFunApp.Web", "Web\JokesFunApp.Web\JokesFunApp.Web.csproj", "{86B9F958-F509-443D-AF37-16711742DA0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JokesFunApp.Data.Models", "Data\JokesFunApp.Data.Models\JokesFunApp.Data.Models.csproj", "{323554E1-91A0-48C1-B159-B5EA9E217FD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JokesFunApp.Data.Models", "Data\JokesFunApp.Data.Models\JokesFunApp.Data.Models.csproj", "{323554E1-91A0-48C1-B159-B5EA9E217FD9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JokesFunApp.Data", "Data\JokesFunApp.Data\JokesFunApp.Data.csproj", "{61ED2840-5C86-4239-BDE3-CB7FC11E0435}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E57AC2E0-38C2-454B-A5C0-7D890B21DB49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox", "Tests\Sandbox\Sandbox.csproj", "{3F1E35F2-B29A-415E-8513-5476BEB43C4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sandbox", "Tests\Sandbox\Sandbox.csproj", "{3F1E35F2-B29A-415E-8513-5476BEB43C4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JokesFunApp.Data.Common", "Data\JokesFunApp.Data.Common\JokesFunApp.Data.Common.csproj", "{F9D8A010-C159-4934-8FFB-5925F4B31315}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JokesFunApp.Data.Common", "Data\JokesFunApp.Data.Common\JokesFunApp.Data.Common.csproj", "{F9D8A010-C159-4934-8FFB-5925F4B31315}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A571E1B7-319A-4153-9E04-2AF3D1C992A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JokesFunApp.Services.DataServices", "Services\JokesFunApp.Services.DataServices\JokesFunApp.Services.DataServices.csproj", "{22013F40-DF25-4E9D-94DB-ECFBF45B1B97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JokesFunApp.Services.Models", "Services\JokesFunApp.Services.Models\JokesFunApp.Services.Models.csproj", "{E82B7BC7-558C-4B63-9BB4-97950F7218E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,14 @@ Global
 		{F9D8A010-C159-4934-8FFB-5925F4B31315}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9D8A010-C159-4934-8FFB-5925F4B31315}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9D8A010-C159-4934-8FFB-5925F4B31315}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22013F40-DF25-4E9D-94DB-ECFBF45B1B97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22013F40-DF25-4E9D-94DB-ECFBF45B1B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22013F40-DF25-4E9D-94DB-ECFBF45B1B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22013F40-DF25-4E9D-94DB-ECFBF45B1B97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E82B7BC7-558C-4B63-9BB4-97950F7218E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E82B7BC7-558C-4B63-9BB4-97950F7218E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E82B7BC7-558C-4B63-9BB4-97950F7218E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E82B7BC7-558C-4B63-9BB4-97950F7218E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +69,8 @@ Global
 		{61ED2840-5C86-4239-BDE3-CB7FC11E0435} = {8DD3ABB1-AED7-4FE2-8CD8-BD80F4F480A3}
 		{3F1E35F2-B29A-415E-8513-5476BEB43C4F} = {E57AC2E0-38C2-454B-A5C0-7D890B21DB49}
 		{F9D8A010-C159-4934-8FFB-5925F4B31315} = {8DD3ABB1-AED7-4FE2-8CD8-BD80F4F480A3}
+		{22013F40-DF25-4E9D-94DB-ECFBF45B1B97} = {A571E1B7-319A-4153-9E04-2AF3D1C992A2}
+		{E82B7BC7-558C-4B63-9BB4-97950F7218E9} = {A571E1B7-319A-4153-9E04-2AF3D1C992A2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {940D3508-649D-460E-B9AC-178474BBED14}
