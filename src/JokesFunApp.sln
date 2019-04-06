@@ -21,9 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JokesFunApp.Data.Common", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A571E1B7-319A-4153-9E04-2AF3D1C992A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JokesFunApp.Services.DataServices", "Services\JokesFunApp.Services.DataServices\JokesFunApp.Services.DataServices.csproj", "{22013F40-DF25-4E9D-94DB-ECFBF45B1B97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JokesFunApp.Services.DataServices", "Services\JokesFunApp.Services.DataServices\JokesFunApp.Services.DataServices.csproj", "{22013F40-DF25-4E9D-94DB-ECFBF45B1B97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JokesFunApp.Services.Models", "Services\JokesFunApp.Services.Models\JokesFunApp.Services.Models.csproj", "{E82B7BC7-558C-4B63-9BB4-97950F7218E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JokesFunApp.Services.Models", "Services\JokesFunApp.Services.Models\JokesFunApp.Services.Models.csproj", "{E82B7BC7-558C-4B63-9BB4-97950F7218E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JokesFunApp.Services.Mapping", "Services\JokesFunApp.Services.Mapping\JokesFunApp.Services.Mapping.csproj", "{5A7027A9-06CE-4683-9BBA-954D2E7B32FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{E82B7BC7-558C-4B63-9BB4-97950F7218E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E82B7BC7-558C-4B63-9BB4-97950F7218E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E82B7BC7-558C-4B63-9BB4-97950F7218E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A7027A9-06CE-4683-9BBA-954D2E7B32FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A7027A9-06CE-4683-9BBA-954D2E7B32FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A7027A9-06CE-4683-9BBA-954D2E7B32FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A7027A9-06CE-4683-9BBA-954D2E7B32FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,6 +77,7 @@ Global
 		{F9D8A010-C159-4934-8FFB-5925F4B31315} = {8DD3ABB1-AED7-4FE2-8CD8-BD80F4F480A3}
 		{22013F40-DF25-4E9D-94DB-ECFBF45B1B97} = {A571E1B7-319A-4153-9E04-2AF3D1C992A2}
 		{E82B7BC7-558C-4B63-9BB4-97950F7218E9} = {A571E1B7-319A-4153-9E04-2AF3D1C992A2}
+		{5A7027A9-06CE-4683-9BBA-954D2E7B32FD} = {A571E1B7-319A-4153-9E04-2AF3D1C992A2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {940D3508-649D-460E-B9AC-178474BBED14}

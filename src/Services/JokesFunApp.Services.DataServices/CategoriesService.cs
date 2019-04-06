@@ -2,8 +2,8 @@
 {
     using JokesFunApp.Data.Common;
     using JokesFunApp.Data.Models;
-    using JokesFunApp.Services.Models;
-
+    using JokesFunApp.Services.Mapping;
+    using JokesFunApp.Services.Models.Categories;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -16,15 +16,12 @@
             this.categoriesRepository = categoriesRepository;
         }
 
-        public IEnumerable<IdAndNameViewModel> GetAll()
+        public IEnumerable<CategoryIdAndNameViewModel> GetAll()
         {
             var categories = this.categoriesRepository.All()
                 .OrderBy(x => x.Name)
-                .Select(x => new IdAndNameViewModel
-                {
-                    Id = x.Id,
-                    Name = x.Name
-                }).ToList();
+                .To<CategoryIdAndNameViewModel>()
+                .ToList();
 
             return categories;
         }

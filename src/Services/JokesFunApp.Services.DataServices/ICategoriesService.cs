@@ -1,12 +1,11 @@
 ﻿namespace JokesFunApp.Services.DataServices
 {
-    using JokesFunApp.Services.Models;
-
+    using JokesFunApp.Services.Models.Categories;
     using System.Collections.Generic;
 
     public interface ICategoriesService
     {
-        IEnumerable<IdAndNameViewModel> GetAll();
+        IEnumerable<CategoryIdAndNameViewModel> GetAll();
 
         bool IsCategoryIdValid(int categoryId);
     }

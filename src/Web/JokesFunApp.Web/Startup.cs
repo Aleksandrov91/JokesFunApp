@@ -1,9 +1,13 @@
 ﻿namespace JokesFunApp.Web
 {
-    using Data;
-    using Data.Common;
-    using Data.Models;
+    using JokesFunApp.Data;
+    using JokesFunApp.Data.Common;
+    using JokesFunApp.Data.Models;
     using JokesFunApp.Services.DataServices;
+    using JokesFunApp.Services.Mapping;
+    using JokesFunApp.Services.Models.Home;
+    using JokesFunApp.Web.Models.Jokes;
+
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;
@@ -55,6 +59,11 @@
             services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
             services.AddScoped<IJokesService, JokesService>();
             services.AddScoped<ICategoriesService, CategoriesService>();
+
+            AutoMapperConfig.RegisterMappings(
+                typeof(IndexViewModel).Assembly,
+                typeof(CreateJokeInputModel).Assembly
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

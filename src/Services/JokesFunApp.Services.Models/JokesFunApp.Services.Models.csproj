@@ -5,11 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Categories\" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
+    <ProjectReference Include="..\..\Data\JokesFunApp.Data.Models\JokesFunApp.Data.Models.csproj" />
+    <ProjectReference Include="..\JokesFunApp.Services.Mapping\JokesFunApp.Services.Mapping.csproj" />
   </ItemGroup>
 
 </Project>

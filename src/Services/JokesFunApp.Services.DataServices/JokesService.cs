@@ -2,6 +2,7 @@
 {
     using JokesFunApp.Data.Common;
     using JokesFunApp.Data.Models;
+    using JokesFunApp.Services.Mapping;
     using JokesFunApp.Services.Models.Home;
     using JokesFunApp.Services.Models.Jokes;
 
@@ -27,22 +28,14 @@
         {
             var jokes = this.jokesRepository.All()
                 .OrderBy(x => Guid.NewGuid())
-                .Select(x => new IndexJokeViewModel
-                {
-                    Id = x.Id,
-                    Content = x.Content,
-                    CategoryName = x.Category.Name
-                }).Take(count).ToList();
+                .To<IndexJokeViewModel>()
+                .Take(count).ToList();
 
             return jokes;
         }
 
         public async Task<int> Create(int categoryId, string content)
         {
-            //TODO: Validate
-            //category
-            //joke
-
             var joke = new Joke
             {
                 CategoryId = categoryId,
@@ -59,11 +52,8 @@
         {
             var joke = this.jokesRepository.All()
                 .Where(x => x.Id == id)
-                .Select(x => new JokesDetailsViewModel
-                {
-                    Content = x.Content,
-                    CategoryName = x.Category.Name
-                }).FirstOrDefault();
+                .To<JokesDetailsViewModel>()
+                .FirstOrDefault();
 
             return joke;
         }
