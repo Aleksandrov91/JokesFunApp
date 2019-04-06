@@ -15,13 +15,16 @@
     {
         private readonly IJokesService jokesService;
         private readonly ICategoriesService categoriesService;
+        private readonly IHtmlSanitizerService htmlSanitizerService;
 
         public JokesController(
             IJokesService jokesService,
-            ICategoriesService categoriesService)
+            ICategoriesService categoriesService,
+            IHtmlSanitizerService htmlSanitizerService)
         {
             this.jokesService = jokesService;
             this.categoriesService = categoriesService;
+            this.htmlSanitizerService = htmlSanitizerService;
         }
 
         [Authorize]
@@ -45,9 +48,11 @@
                 return this.View(input);
             }
 
-            var id = await this.jokesService.Create(input.CategoryId, input.Content);
+            var sanitizedContent = this.htmlSanitizerService.Sanitize(input.Content);
 
-            return this.RedirectToAction("View", new { id = id });
+            var id = await this.jokesService.Create(input.CategoryId, sanitizedContent);
+
+            return this.RedirectToAction(nameof(Details), new { id });
         }
 
         public IActionResult Details(int id)

@@ -1,5 +1,7 @@
 ﻿namespace JokesFunApp.Web
 {
+    using Ganss.XSS;
+
     using JokesFunApp.Data;
     using JokesFunApp.Data.Common;
     using JokesFunApp.Data.Models;
@@ -59,6 +61,8 @@
             services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
             services.AddScoped<IJokesService, JokesService>();
             services.AddScoped<ICategoriesService, CategoriesService>();
+            services.AddScoped<IHtmlSanitizerService, HtmlSanitizerService>();
+            services.AddScoped(typeof(HtmlSanitizer));
 
             AutoMapperConfig.RegisterMappings(
                 typeof(IndexViewModel).Assembly,
