@@ -1,10 +1,10 @@
 ﻿namespace JokesFunApp.Data
 {
-    using System;
-    using Common;
+    using JokesFunApp.Data.Common;
 
     using Microsoft.EntityFrameworkCore;
 
+    using System;
     using System.Linq;
     using System.Threading.Tasks;
 

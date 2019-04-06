@@ -1,6 +1,6 @@
 ﻿namespace JokesFunApp.Data.Models
 {
-    using Common;
+    using JokesFunApp.Data.Common;
 
     public class Joke : BaseModel<int>
     {

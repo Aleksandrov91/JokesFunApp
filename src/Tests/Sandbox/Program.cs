@@ -1,5 +1,11 @@
 ﻿namespace Sandbox
 {
+    using AngleSharp;
+
+    using JokesFunApp.Data;
+    using JokesFunApp.Data.Common;
+    using JokesFunApp.Data.Models;
+
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
@@ -8,10 +14,6 @@
     using System.IO;
     using System.Linq;
     using System.Text;
-    using AngleSharp;
-    using JokesFunApp.Data;
-    using JokesFunApp.Data.Common;
-    using JokesFunApp.Data.Models;
 
     public class Program
     {

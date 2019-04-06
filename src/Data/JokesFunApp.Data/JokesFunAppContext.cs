@@ -1,9 +1,9 @@
 ﻿namespace JokesFunApp.Data
 {
+    using JokesFunApp.Data.Models;
+
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
-
-    using Models;
 
     public class JokesFunAppContext : IdentityDbContext<JokesFunAppUser>
     {
