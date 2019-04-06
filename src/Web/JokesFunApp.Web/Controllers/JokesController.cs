@@ -1,6 +1,7 @@
 ﻿namespace JokesFunApp.Web.Controllers
 {
     using JokesFunApp.Services.DataServices;
+    using JokesFunApp.Services.Models.Jokes;
     using JokesFunApp.Web.Models.Jokes;
 
     using Microsoft.AspNetCore.Authorization;
@@ -50,8 +51,8 @@
         }
 
         public IActionResult Details(int id)
-        {
-            var joke = this.jokesService.GetJokeById(id);
+        { 
+            var joke = this.jokesService.GetJokeById<JokeDetailsViewModel>(id);
 
             return this.View(joke);
         }

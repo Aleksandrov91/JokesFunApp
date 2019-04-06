@@ -3,7 +3,7 @@
     using JokesFunApp.Data.Models;
     using JokesFunApp.Services.Mapping;
 
-    public class JokesDetailsViewModel : IMapFrom<Joke>
+    public class JokeDetailsViewModel : IMapFrom<Joke>
     {
         public string Content { get; set; }
 

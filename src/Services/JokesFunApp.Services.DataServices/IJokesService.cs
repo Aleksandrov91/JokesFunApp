@@ -1,7 +1,6 @@
 ﻿namespace JokesFunApp.Services.DataServices
 {
     using JokesFunApp.Services.Models.Home;
-    using JokesFunApp.Services.Models.Jokes;
 
     using System.Collections.Generic;
     using System.Threading.Tasks;
@@ -12,6 +11,6 @@
 
         Task<int> Create(int categoryId, string content);
 
-        JokesDetailsViewModel GetJokeById(int id);
+        TViewModel GetJokeById<TViewModel>(int id);
     }
 }

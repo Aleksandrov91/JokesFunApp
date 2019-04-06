@@ -4,7 +4,6 @@
     using JokesFunApp.Data.Models;
     using JokesFunApp.Services.Mapping;
     using JokesFunApp.Services.Models.Home;
-    using JokesFunApp.Services.Models.Jokes;
 
     using System;
     using System.Collections.Generic;
@@ -48,11 +47,11 @@
             return joke.Id;
         }
 
-        public JokesDetailsViewModel GetJokeById(int id)
+        public TViewModel GetJokeById<TViewModel>(int id)
         {
             var joke = this.jokesRepository.All()
                 .Where(x => x.Id == id)
-                .To<JokesDetailsViewModel>()
+                .To<TViewModel>()
                 .FirstOrDefault();
 
             return joke;
